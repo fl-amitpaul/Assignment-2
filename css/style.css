@@ -1,0 +1,586 @@
+/* reset and global styles starts here  */
+:root {
+	--primary-color: #06c167;
+	--secondary-color: #f3fcf7;
+	--blue-shed: #f3fafb;
+	--gray-shed: #f0f1ec;
+	--gray-text: #767675;
+	--white: #ffffff;
+	--primary-text-color: #1d1d1f;
+	--secondary-text-color: #1d1d1fbf;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	font-family: "Inter", sans-serif;
+	background-color: var(--white);
+	color: var(--primary-text-color);
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul {
+	list-style: none;
+}
+.primary-btn {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--white);
+	background-color: var(--primary-color);
+	padding: 2rem;
+}
+.primary-btn i {
+	margin-left: 1.8rem;
+}
+.container {
+	width: 100%;
+	padding: 5rem 10rem;
+}
+.mt {
+	margin-top: 5rem;
+}
+.container-heading {
+	font-size: 6rem;
+	font-weight: 500;
+	margin-top: 2.5rem;
+}
+img {
+	width: 100%;
+}
+.text-center {
+	text-align: center;
+	display: block;
+}
+/* reset and global styles ends here  */
+
+/* navbar starts here  */
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: var(--secondary-color);
+	z-index: 1000;
+	padding: 1.5rem 10rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	font-size: 3.2rem;
+	font-weight: 500;
+	color: var(--primary-color);
+}
+.nav-icon {
+	font-size: 3rem;
+	color: var(--primary-color);
+	border: 2px solid var(--primary-color);
+	display: none;
+}
+.navbar .nav-menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3rem;
+}
+.nav-menu .item {
+	font-size: 1.6rem;
+	font-weight: 400;
+	position: relative;
+}
+.active,
+.nav-menu .item:hover {
+	color: var(--primary-color);
+}
+.active::after {
+	content: "";
+	display: inline-block;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: var(--primary-color);
+	position: absolute;
+	top: 2.5rem;
+	left: 45%;
+}
+/* navbar ends here  */
+
+/* Hero section starts here */
+.hero {
+	max-width: 100%;
+	height: 60rem;
+	background-color: var(--secondary-color);
+	padding: 2rem 10rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.hero-left {
+	flex: 1;
+	margin-top: 5rem;
+}
+.hero-left__heading {
+	font-size: 7.5rem;
+	font-weight: 600;
+}
+.hero-left__desc {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--secondary-text-color);
+	margin-top: 1rem;
+	margin-bottom: 5rem;
+}
+
+.hero-right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	margin-top: 5rem;
+
+	position: relative;
+}
+.image-wraper {
+	max-width: 40.5rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	margin-top: 22rem;
+	position: relative;
+}
+.cut-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0 95%);
+	/* clip-path: polygon(0 0, 100% 0, 100% 55rem, 98% 56rem, 2% 58rem, 0 57rem); */
+}
+
+.grid-dots {
+	width: 17rem;
+	position: absolute;
+	right: 2.5rem;
+	bottom: 0;
+	z-index: 10;
+}
+.hero-right__rating,
+.hero-right__review {
+	max-width: 25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+
+	background-color: var(--white);
+	border-radius: 4rem;
+	padding: 1rem;
+}
+.hero-right__rating span,
+.hero-right__review span {
+	font-size: 1.6rem;
+}
+.hero-right__rating img {
+	width: 10rem;
+}
+.hero-right__rating {
+	position: absolute;
+	left: 0;
+	top: 60%;
+}
+.hero-right__review {
+	padding: 0.5rem 1rem 0.5rem 0.5rem;
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+.hero-right__review img {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+}
+/* Hero section ends here */
+
+/* brand-logo section starts here  */
+.brand-logo {
+	width: 60%;
+	padding: 4rem 10rem;
+	margin-bottom: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 50;
+	gap: 5rem;
+}
+.brand-logo img {
+	width: 12rem;
+}
+/* brand-logo section ends here  */
+
+/* features section starts here  */
+.features {
+	border-top: 0.3rem solid var(--gray-shed);
+	border-bottom: 0.3rem solid var(--gray-shed);
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.feature {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+}
+.feature img {
+	width: 7rem;
+}
+.feature-desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+}
+.feature-desc__heading {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+.feature-desc__details {
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+/* features section ends here  */
+
+/* Benefit and stars section starts here  */
+.benefit,
+.stars {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3rem;
+}
+.img-box {
+	width: 100%;
+	height: 100%;
+
+	flex: 1;
+	background-color: var(--blue-shed);
+}
+.benefit-img-box {
+	padding: 0 3rem 3rem 3rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.stars-img-box {
+	padding: 0 0 3rem 3rem;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+.img-box-img {
+	max-width: 40rem;
+}
+.benefit-details,
+.stars-details {
+	flex: 1;
+}
+.benefit-details {
+	display: flex;
+	flex-direction: column;
+}
+
+.small-title {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.benefit-list {
+	margin-top: 6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+.benefit-list__item {
+	font-size: 1.6rem;
+	font-weight: 400;
+
+	position: relative;
+	padding-left: 4.5rem;
+}
+
+.benefit-list__item::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 22px;
+	height: 17px;
+	background-image: url("../images/icon/Icon\ awesome-check.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+/* Benefit section ends here  */
+.achievments {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-top: 6rem;
+	margin-bottom: 7rem;
+}
+.achiements-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+.number {
+	font-size: 4rem;
+	font-weight: 600;
+	color: var(--primary-color);
+}
+.desc {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: var(--primary-text-color);
+}
+/* Benefit and starts section ends here  */
+
+/* Our Features starts here  */
+.foods-section {
+	margin-top: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.food-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.food-item__img {
+	width: 26rem;
+	height: 26rem;
+	overflow: hidden;
+}
+.food-item__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.food-item__desc {
+	width: 26rem;
+	padding: 2rem;
+	border: 0.2rem solid var(--primary-color);
+}
+.food-item__desc-title {
+	font-size: 3.2rem;
+	font-weight: 500;
+	margin-bottom: 2rem;
+}
+.food-item__desc-details {
+	font-size: 1.6rem;
+	font-weight: 400;
+	margin-bottom: 2rem;
+}
+.secondary-btn {
+	display: inline-block;
+	padding: 2rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+}
+.item-three,
+.item-four {
+	flex-direction: row-reverse;
+}
+/* Our Features ends here  */
+
+/* Our Product section starts here  */
+.our-products {
+	margin-top: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	row-gap: 3rem;
+	flex-wrap: wrap;
+}
+.product-item {
+	padding: 3rem 3rem;
+	text-align: center;
+	border: 0.3rem solid var(--gray-shed);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.selected,
+.product-item:hover {
+	border-color: var(--primary-color);
+}
+.product-item__img {
+	width: 19rem;
+	height: 19rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.product-item__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.product-item__ratings {
+	width: 10rem;
+	margin-top: 0.5rem;
+}
+.product-item__title {
+	font-size: 2rem;
+	font-weight: 400;
+	margin-top: 2rem;
+}
+.product-item__price {
+	font-size: 2rem;
+	font-weight: 500;
+	color: var(--primary-color);
+	margin-top: 2rem;
+}
+.product-item__price del {
+	color: var(--gray-text);
+}
+.product-item__btn {
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: var(--primary-color);
+	padding: 1.5rem 2rem;
+	border: 0.2rem solid var(--primary-color);
+	margin-top: 2.5rem;
+}
+.product-item__btn i {
+	margin-left: 1rem;
+}
+/* Our Product section ends here  */
+
+/* Last container starts here  */
+.last-container {
+	padding: 7rem 15rem 10rem 15rem;
+	text-align: center;
+
+	background-image: url("../images/Veggie.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	background-color: rgba(0, 0, 0, 0.6);
+	background-blend-mode: darken;
+}
+.last-container .container-heading {
+	color: var(--white);
+	margin-bottom: 4rem;
+}
+/* Last container ends here  */
+
+/* Footer top section starts here  */
+.footer-top {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	row-gap: 4rem;
+}
+.footer-top__column-one {
+	flex: 0 0 33%;
+}
+.footer-top__text {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--gray-text);
+	margin: 4rem 0;
+}
+.column-one__icons {
+	font-size: 2rem;
+}
+.column-one__icons i {
+	margin-right: 1rem;
+	transition: all 0.3s ease;
+}
+.column-one__icons i:hover {
+	color: var(--primary-color);
+	scale: 1.5;
+}
+
+.footer-top__column-two {
+	flex: 0 0 33%;
+	display: flex;
+	justify-content: center;
+	gap: 5rem;
+}
+.footer-top__heading {
+	font-size: 2.4rem;
+}
+.column-two__left ul {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--gray-text);
+	margin-top: 4rem;
+}
+
+.column-two__left ul li {
+	margin-bottom: 1.5rem;
+}
+
+.footer-top__column-three {
+	flex: 0 0 33%;
+}
+.subscribe-form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 1rem;
+}
+.subscribe-form .email {
+	font-size: 1.6rem;
+	background-color: var(--gray-shed);
+	outline: none;
+	border: none;
+	padding: 1.5rem 2rem;
+}
+.subscribe-form .email-submit {
+	font-size: 1.6rem;
+	color: var(--white);
+	background-color: var(--primary-color);
+	outline: none;
+	border: none;
+	padding: 1.5rem 2.5rem;
+	cursor: pointer;
+}
+/* Footer top section ends here  */
+
+/* Footer bottom section starts here  */
+.footer-bottom {
+	padding: 3rem 10rem;
+	text-align: center;
+}
+.footer-bottom__text {
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+/* Footer bottom section ends here  */
